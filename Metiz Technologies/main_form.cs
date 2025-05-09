@@ -16,6 +16,12 @@ namespace Metiz_Technologies
         public main_form()
         {
             InitializeComponent();
+
+            this.Load += (s, a) =>
+            {
+                FormFadeInFadeOut formFadeIn = new FormFadeInFadeOut(this, true);
+                formFadeIn.StartTimer();
+            };
         }
 
         private void Close_btn_Click(object sender, EventArgs e)

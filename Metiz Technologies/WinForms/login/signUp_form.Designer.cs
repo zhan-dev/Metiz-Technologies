@@ -29,70 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signUp_form));
-            this.Top_panel = new System.Windows.Forms.Panel();
-            this.close_btn = new System.Windows.Forms.Button();
-            this.metizCompany_lbl = new System.Windows.Forms.Label();
             this.signUpGif_pb = new System.Windows.Forms.PictureBox();
             this.signUp_panel = new System.Windows.Forms.Panel();
-            this.userPassword_panel = new System.Windows.Forms.Panel();
-            this.userEmail_panel = new System.Windows.Forms.Panel();
-            this.userName_panel = new System.Windows.Forms.Panel();
-            this.userPassword_txt = new System.Windows.Forms.TextBox();
-            this.loginHere_lbl = new System.Windows.Forms.LinkLabel();
-            this.userEmail_lbl = new System.Windows.Forms.Label();
             this.userName_lbl = new System.Windows.Forms.Label();
-            this.userPassword_lbl = new System.Windows.Forms.Label();
-            this.register_btn = new System.Windows.Forms.Button();
-            this.showPassword_chb = new System.Windows.Forms.CheckBox();
-            this.userEmail_txt = new System.Windows.Forms.TextBox();
+            this.userName_panel = new System.Windows.Forms.Panel();
             this.userName_txt = new System.Windows.Forms.TextBox();
+            this.userPassword_lbl = new System.Windows.Forms.Label();
+            this.userPassword_panel = new System.Windows.Forms.Panel();
+            this.userPassword_txt = new System.Windows.Forms.TextBox();
+            this.showPassword_chb = new System.Windows.Forms.CheckBox();
+            this.userEmail_lbl = new System.Windows.Forms.Label();
+            this.userEmail_panel = new System.Windows.Forms.Panel();
+            this.userEmail_txt = new System.Windows.Forms.TextBox();
+            this.register_btn = new System.Windows.Forms.Button();
+            this.loginHere_lbl = new System.Windows.Forms.LinkLabel();
             this.getStarted_lbl = new System.Windows.Forms.Label();
-            this.Top_panel.SuspendLayout();
+            this.headerBar_userControl = new Metiz_Technologies.User_Controls.HeaderBar_userControl();
             ((System.ComponentModel.ISupportInitialize)(this.signUpGif_pb)).BeginInit();
             this.signUp_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Top_panel
-            // 
-            this.Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(5)))), ((int)(((byte)(50)))));
-            this.Top_panel.Controls.Add(this.close_btn);
-            this.Top_panel.Controls.Add(this.metizCompany_lbl);
-            this.Top_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Top_panel.Location = new System.Drawing.Point(0, 0);
-            this.Top_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.Top_panel.Name = "Top_panel";
-            this.Top_panel.Size = new System.Drawing.Size(800, 36);
-            this.Top_panel.TabIndex = 5;
-            this.Top_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Top_panel_MouseDown);
-            this.Top_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Top_panel_MouseMove);
-            this.Top_panel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Top_panel_MouseUp);
-            // 
-            // close_btn
-            // 
-            this.close_btn.BackgroundImage = global::Metiz_Technologies.Properties.Resources.WhiteThemeClose_20;
-            this.close_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.close_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.close_btn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.close_btn.FlatAppearance.BorderSize = 0;
-            this.close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_btn.Location = new System.Drawing.Point(760, 0);
-            this.close_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(40, 36);
-            this.close_btn.TabIndex = 7;
-            this.close_btn.UseVisualStyleBackColor = true;
-            this.close_btn.Click += new System.EventHandler(this.Close_btn_Click);
-            // 
-            // metizCompany_lbl
-            // 
-            this.metizCompany_lbl.AutoSize = true;
-            this.metizCompany_lbl.ForeColor = System.Drawing.Color.White;
-            this.metizCompany_lbl.Location = new System.Drawing.Point(15, 7);
-            this.metizCompany_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metizCompany_lbl.Name = "metizCompany_lbl";
-            this.metizCompany_lbl.Size = new System.Drawing.Size(113, 20);
-            this.metizCompany_lbl.TabIndex = 0;
-            this.metizCompany_lbl.Text = "Metiz Company";
             // 
             // signUpGif_pb
             // 
@@ -128,23 +83,17 @@
             this.signUp_panel.Size = new System.Drawing.Size(336, 382);
             this.signUp_panel.TabIndex = 8;
             // 
-            // userPassword_panel
+            // userName_lbl
             // 
-            this.userPassword_panel.BackgroundImage = global::Metiz_Technologies.Properties.Resources.WhiteThemePassword_20;
-            this.userPassword_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.userPassword_panel.Location = new System.Drawing.Point(18, 124);
-            this.userPassword_panel.Name = "userPassword_panel";
-            this.userPassword_panel.Size = new System.Drawing.Size(27, 27);
-            this.userPassword_panel.TabIndex = 7;
-            // 
-            // userEmail_panel
-            // 
-            this.userEmail_panel.BackgroundImage = global::Metiz_Technologies.Properties.Resources.WhiteThemeSign_20;
-            this.userEmail_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.userEmail_panel.Location = new System.Drawing.Point(19, 205);
-            this.userEmail_panel.Name = "userEmail_panel";
-            this.userEmail_panel.Size = new System.Drawing.Size(27, 27);
-            this.userEmail_panel.TabIndex = 7;
+            this.userName_lbl.AutoSize = true;
+            this.userName_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.userName_lbl.ForeColor = System.Drawing.Color.White;
+            this.userName_lbl.Location = new System.Drawing.Point(46, 29);
+            this.userName_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.userName_lbl.Name = "userName_lbl";
+            this.userName_lbl.Size = new System.Drawing.Size(82, 20);
+            this.userName_lbl.TabIndex = 0;
+            this.userName_lbl.Text = "User Name";
             // 
             // userName_panel
             // 
@@ -155,6 +104,35 @@
             this.userName_panel.Size = new System.Drawing.Size(27, 27);
             this.userName_panel.TabIndex = 7;
             // 
+            // userName_txt
+            // 
+            this.userName_txt.Location = new System.Drawing.Point(49, 53);
+            this.userName_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.userName_txt.Name = "userName_txt";
+            this.userName_txt.Size = new System.Drawing.Size(238, 27);
+            this.userName_txt.TabIndex = 1;
+            // 
+            // userPassword_lbl
+            // 
+            this.userPassword_lbl.AutoSize = true;
+            this.userPassword_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.userPassword_lbl.ForeColor = System.Drawing.Color.White;
+            this.userPassword_lbl.Location = new System.Drawing.Point(46, 100);
+            this.userPassword_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.userPassword_lbl.Name = "userPassword_lbl";
+            this.userPassword_lbl.Size = new System.Drawing.Size(70, 20);
+            this.userPassword_lbl.TabIndex = 0;
+            this.userPassword_lbl.Text = "Password";
+            // 
+            // userPassword_panel
+            // 
+            this.userPassword_panel.BackgroundImage = global::Metiz_Technologies.Properties.Resources.WhiteThemePassword_20;
+            this.userPassword_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userPassword_panel.Location = new System.Drawing.Point(18, 124);
+            this.userPassword_panel.Name = "userPassword_panel";
+            this.userPassword_panel.Size = new System.Drawing.Size(27, 27);
+            this.userPassword_panel.TabIndex = 7;
+            // 
             // userPassword_txt
             // 
             this.userPassword_txt.Location = new System.Drawing.Point(49, 124);
@@ -164,19 +142,18 @@
             this.userPassword_txt.TabIndex = 2;
             this.userPassword_txt.UseSystemPasswordChar = true;
             // 
-            // loginHere_lbl
+            // showPassword_chb
             // 
-            this.loginHere_lbl.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.loginHere_lbl.AutoSize = true;
-            this.loginHere_lbl.LinkColor = System.Drawing.Color.DarkGray;
-            this.loginHere_lbl.Location = new System.Drawing.Point(127, 334);
-            this.loginHere_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.loginHere_lbl.Name = "loginHere_lbl";
-            this.loginHere_lbl.Size = new System.Drawing.Size(82, 20);
-            this.loginHere_lbl.TabIndex = 6;
-            this.loginHere_lbl.TabStop = true;
-            this.loginHere_lbl.Text = "Login Here";
-            this.loginHere_lbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginHere_llbl_LinkClicked);
+            this.showPassword_chb.AutoSize = true;
+            this.showPassword_chb.BackColor = System.Drawing.Color.Transparent;
+            this.showPassword_chb.ForeColor = System.Drawing.Color.White;
+            this.showPassword_chb.Location = new System.Drawing.Point(158, 159);
+            this.showPassword_chb.Margin = new System.Windows.Forms.Padding(4);
+            this.showPassword_chb.Name = "showPassword_chb";
+            this.showPassword_chb.Size = new System.Drawing.Size(129, 24);
+            this.showPassword_chb.TabIndex = 3;
+            this.showPassword_chb.Text = "Show Password";
+            this.showPassword_chb.UseVisualStyleBackColor = false;
             // 
             // userEmail_lbl
             // 
@@ -190,29 +167,22 @@
             this.userEmail_lbl.TabIndex = 0;
             this.userEmail_lbl.Text = "Email";
             // 
-            // userName_lbl
+            // userEmail_panel
             // 
-            this.userName_lbl.AutoSize = true;
-            this.userName_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.userName_lbl.ForeColor = System.Drawing.Color.White;
-            this.userName_lbl.Location = new System.Drawing.Point(46, 29);
-            this.userName_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.userName_lbl.Name = "userName_lbl";
-            this.userName_lbl.Size = new System.Drawing.Size(82, 20);
-            this.userName_lbl.TabIndex = 0;
-            this.userName_lbl.Text = "User Name";
+            this.userEmail_panel.BackgroundImage = global::Metiz_Technologies.Properties.Resources.WhiteThemeSign_20;
+            this.userEmail_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userEmail_panel.Location = new System.Drawing.Point(19, 205);
+            this.userEmail_panel.Name = "userEmail_panel";
+            this.userEmail_panel.Size = new System.Drawing.Size(27, 27);
+            this.userEmail_panel.TabIndex = 7;
             // 
-            // userPassword_lbl
+            // userEmail_txt
             // 
-            this.userPassword_lbl.AutoSize = true;
-            this.userPassword_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.userPassword_lbl.ForeColor = System.Drawing.Color.White;
-            this.userPassword_lbl.Location = new System.Drawing.Point(46, 100);
-            this.userPassword_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.userPassword_lbl.Name = "userPassword_lbl";
-            this.userPassword_lbl.Size = new System.Drawing.Size(70, 20);
-            this.userPassword_lbl.TabIndex = 0;
-            this.userPassword_lbl.Text = "Password";
+            this.userEmail_txt.Location = new System.Drawing.Point(50, 205);
+            this.userEmail_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.userEmail_txt.Name = "userEmail_txt";
+            this.userEmail_txt.Size = new System.Drawing.Size(238, 27);
+            this.userEmail_txt.TabIndex = 4;
             // 
             // register_btn
             // 
@@ -229,35 +199,18 @@
             this.register_btn.UseVisualStyleBackColor = true;
             this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
             // 
-            // showPassword_chb
+            // loginHere_lbl
             // 
-            this.showPassword_chb.AutoSize = true;
-            this.showPassword_chb.BackColor = System.Drawing.Color.Transparent;
-            this.showPassword_chb.ForeColor = System.Drawing.Color.White;
-            this.showPassword_chb.Location = new System.Drawing.Point(158, 159);
-            this.showPassword_chb.Margin = new System.Windows.Forms.Padding(4);
-            this.showPassword_chb.Name = "showPassword_chb";
-            this.showPassword_chb.Size = new System.Drawing.Size(129, 24);
-            this.showPassword_chb.TabIndex = 3;
-            this.showPassword_chb.Text = "Show Password";
-            this.showPassword_chb.UseVisualStyleBackColor = false;
-            this.showPassword_chb.CheckedChanged += new System.EventHandler(this.showPassword_chb_CheckedChanged);
-            // 
-            // userEmail_txt
-            // 
-            this.userEmail_txt.Location = new System.Drawing.Point(50, 205);
-            this.userEmail_txt.Margin = new System.Windows.Forms.Padding(4);
-            this.userEmail_txt.Name = "userEmail_txt";
-            this.userEmail_txt.Size = new System.Drawing.Size(238, 27);
-            this.userEmail_txt.TabIndex = 4;
-            // 
-            // userName_txt
-            // 
-            this.userName_txt.Location = new System.Drawing.Point(49, 53);
-            this.userName_txt.Margin = new System.Windows.Forms.Padding(4);
-            this.userName_txt.Name = "userName_txt";
-            this.userName_txt.Size = new System.Drawing.Size(238, 27);
-            this.userName_txt.TabIndex = 1;
+            this.loginHere_lbl.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginHere_lbl.AutoSize = true;
+            this.loginHere_lbl.LinkColor = System.Drawing.Color.DarkGray;
+            this.loginHere_lbl.Location = new System.Drawing.Point(127, 334);
+            this.loginHere_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.loginHere_lbl.Name = "loginHere_lbl";
+            this.loginHere_lbl.Size = new System.Drawing.Size(82, 20);
+            this.loginHere_lbl.TabIndex = 6;
+            this.loginHere_lbl.TabStop = true;
+            this.loginHere_lbl.Text = "Login Here";
             // 
             // getStarted_lbl
             // 
@@ -272,16 +225,27 @@
             this.getStarted_lbl.TabIndex = 9;
             this.getStarted_lbl.Text = "Get Started";
             // 
+            // headerBar_userControl
+            // 
+            this.headerBar_userControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerBar_userControl.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.headerBar_userControl.Location = new System.Drawing.Point(0, 0);
+            this.headerBar_userControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.headerBar_userControl.Name = "headerBar_userControl";
+            this.headerBar_userControl.Size = new System.Drawing.Size(800, 36);
+            this.headerBar_userControl.TabIndex = 10;
+            // 
             // signUp_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(5)))), ((int)(((byte)(50)))));
             this.BackgroundImage = global::Metiz_Technologies.Properties.Resources.loginAnimatedBackgroundAsImg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 476);
+            this.Controls.Add(this.headerBar_userControl);
             this.Controls.Add(this.getStarted_lbl);
             this.Controls.Add(this.signUp_panel);
-            this.Controls.Add(this.Top_panel);
             this.Controls.Add(this.signUpGif_pb);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11F);
@@ -291,8 +255,6 @@
             this.Name = "signUp_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signUp";
-            this.Top_panel.ResumeLayout(false);
-            this.Top_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.signUpGif_pb)).EndInit();
             this.signUp_panel.ResumeLayout(false);
             this.signUp_panel.PerformLayout();
@@ -302,10 +264,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel Top_panel;
-        private System.Windows.Forms.Button close_btn;
-        private System.Windows.Forms.Label metizCompany_lbl;
         private System.Windows.Forms.PictureBox signUpGif_pb;
         private System.Windows.Forms.Panel signUp_panel;
         private System.Windows.Forms.Panel userPassword_panel;
@@ -321,5 +279,6 @@
         private System.Windows.Forms.Label userEmail_lbl;
         private System.Windows.Forms.TextBox userEmail_txt;
         private System.Windows.Forms.Label getStarted_lbl;
+        private User_Controls.HeaderBar_userControl headerBar_userControl;
     }
 }
