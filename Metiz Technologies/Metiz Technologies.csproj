@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -71,12 +71,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CompanyInfo.cs" />
+    <Compile Include="Classes\FormFadeInFadeOut.cs" />
     <Compile Include="Classes\mainFormActions.cs" />
     <Compile Include="Classes\FileLoad.cs" />
-    <Compile Include="login_form.cs">
+    <Compile Include="Classes\Messages.cs" />
+    <Compile Include="User Controls\HeaderBar_userControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\HeaderBar_userControl.Designer.cs">
+      <DependentUpon>HeaderBar_userControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\login\login_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login_form.Designer.cs">
+    <Compile Include="WinForms\login\login_form.Designer.cs">
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
     <Compile Include="main_form.cs">
@@ -87,10 +96,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="signUp_form.cs">
+    <Compile Include="WinForms\login\signUp_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="signUp_form.Designer.cs">
+    <Compile Include="WinForms\login\signUp_form.Designer.cs">
       <DependentUpon>signUp_form.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Reports_userControl.cs">
@@ -99,7 +108,10 @@
     <Compile Include="User Controls\Reports_userControl.Designer.cs">
       <DependentUpon>Reports_userControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="login_form.resx">
+    <EmbeddedResource Include="User Controls\HeaderBar_userControl.resx">
+      <DependentUpon>HeaderBar_userControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\login\login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
@@ -115,7 +127,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="signUp_form.resx">
+    <EmbeddedResource Include="WinForms\login\signUp_form.resx">
       <DependentUpon>signUp_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Reports_userControl.resx">
@@ -211,7 +223,6 @@
     <None Include="Images\Icons\BlackArrowToRight_25.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\login\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
