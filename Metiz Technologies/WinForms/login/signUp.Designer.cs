@@ -1,6 +1,6 @@
 ﻿namespace Metiz_Technologies
 {
-    partial class registration_form
+    partial class signUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registration_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signUp));
             this.signUpGif_pb = new System.Windows.Forms.PictureBox();
             this.signUp_panel = new System.Windows.Forms.Panel();
             this.userName_lbl = new System.Windows.Forms.Label();
