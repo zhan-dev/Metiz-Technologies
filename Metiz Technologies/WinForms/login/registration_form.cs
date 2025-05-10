@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace Metiz_Technologies
 {
-    public partial class signUp_form : Form
+    public partial class registration_form : Form
     {
-        public signUp_form()
+        public registration_form()
         {
             InitializeComponent();
 

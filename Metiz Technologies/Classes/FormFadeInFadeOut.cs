@@ -10,7 +10,7 @@ namespace Metiz_Technologies.Classes
         private readonly bool FadeInOut;
         private const double opacityStep = 0.05;
 
-        internal FormFadeInFadeOut(Form form, bool isNeedShow, int interval = 25)
+        internal FormFadeInFadeOut(Form form, bool isNeedShow, int interval = 20)
         {
             targetForm = form;
             FadeInOut = isNeedShow;

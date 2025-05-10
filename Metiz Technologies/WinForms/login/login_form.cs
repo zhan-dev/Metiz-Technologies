@@ -27,7 +27,7 @@ namespace Metiz_Technologies
 
             createNewAcc_lbl.LinkClicked += (s, a) =>
             {
-                signUp_form signUp_form = new signUp_form();
+                registration_form signUp_form = new registration_form();
                 signUp_form.StartPosition = FormStartPosition.Manual;
                 signUp_form.Location = this.Location;
                 this.Hide();

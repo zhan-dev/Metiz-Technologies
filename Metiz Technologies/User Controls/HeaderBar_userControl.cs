@@ -9,6 +9,7 @@ namespace Metiz_Technologies.User_Controls
         //Move Form Dynamically on Mouse Drag
         private bool isDragging = false; // Flag to check if the form is being dragged
         private Point startPoint = new Point(0, 0); // Starting point of the mouse
+
         public HeaderBar_userControl()
         {
             InitializeComponent();
