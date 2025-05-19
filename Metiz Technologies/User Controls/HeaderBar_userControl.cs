@@ -47,7 +47,22 @@ namespace Metiz_Technologies.User_Controls
             us_panel.Click += (s, a) => { ChangeLang("us"); };
             ru_panel.Click += (s, a) => { ChangeLang("ru"); };
             ua_panel.Click += (s, a) => { ChangeLang("ua"); };
-
+            
+            windowTray_btn.Click += (s, a) => 
+            {               
+                if (this.Parent is Form parentForm)
+                    parentForm.WindowState = FormWindowState.Minimized;
+            };
+            windowMinMax_btn.Click += (s, a) =>
+            {
+                if (this.Parent is Form parentForm)
+                {
+                    if (parentForm.WindowState == FormWindowState.Maximized)
+                        parentForm.WindowState = FormWindowState.Normal;
+                    else if (parentForm.WindowState == FormWindowState.Normal)
+                        parentForm.WindowState = FormWindowState.Maximized;
+                }
+            };
             close_btn.Click += (s, a) => { Application.Exit(); };
         }
 
@@ -79,6 +94,11 @@ namespace Metiz_Technologies.User_Controls
                 if (control != null)
                     control.Text = GlobalTranslation.ProgramLanguage(CompanyInfo.programLanguage, entry.Value);
             }
+        }
+
+        public void HideButton()
+        {
+            windowMinMax_btn.Visible = false;
         }
     }
 }

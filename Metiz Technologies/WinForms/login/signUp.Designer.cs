@@ -64,6 +64,7 @@
             // 
             // signUp_panel
             // 
+            this.signUp_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.signUp_panel.BackColor = System.Drawing.Color.Transparent;
             this.signUp_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.signUp_panel.Controls.Add(this.userName_lbl);
