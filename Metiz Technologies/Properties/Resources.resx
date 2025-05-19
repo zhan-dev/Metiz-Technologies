@@ -118,23 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="loginAnimatedBackgroundAsGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\gif\loginAnimatedBackgroundAsGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BlackArrowToRight_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\BlackArrowToRight_25.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteThemeMinimizeWindow_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\WhiteThemeMinimizeWindow_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlackDrag List Down_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\BlackDrag List Down_40.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteThemeSign_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\WhiteThemeSign_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flag_ua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\language\flag_ua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhiteThemeUser_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\WhiteThemeUser_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlackArrowToLeft_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\BlackArrowToLeft_25.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flag_ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\language\flag_ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhiteThemePassword_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\WhiteThemePassword_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +148,20 @@
   <data name="flag_us" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\language\flag_us.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginAnimatedBackgroundAsGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\gif\loginAnimatedBackgroundAsGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flag_ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\language\flag_ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteThemeRestoreDown_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\WhiteThemeRestoreDown_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlackUploadToTheCloud_150" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\BlackUploadToTheCloud_150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlackDownloadFromTheCloud_150" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\BlackDownloadFromTheCloud_150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteThemeSign_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\WhiteThemeSign_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenUploadToTheCloud_150" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\GreenUploadToTheCloud_150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +172,7 @@
   <data name="loginAnimatedBackgroundAsImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\backgrounds\loginAnimatedBackgroundAsImg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flag_ua" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\language\flag_ua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhiteThemeFullScreen_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\WhiteThemeFullScreen_20.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,7 +1,9 @@
 ﻿using Metiz_Technologies.Classes;
+using Metiz_Technologies.User_Controls;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Metiz_Technologies
@@ -18,6 +20,9 @@ namespace Metiz_Technologies
                 formFadeIn.StartTimer();
 
                 headerBarSignUp_userControl.ChangeLang(CompanyInfo.programLanguage);
+
+                var uc = this.Controls.OfType<HeaderBar_userControl>().FirstOrDefault();
+                uc?.HideButton();
             };
 
             loginHere_lbl.LinkClicked += (s, a) =>

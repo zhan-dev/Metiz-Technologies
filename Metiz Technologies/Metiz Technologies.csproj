@@ -217,5 +217,14 @@
   <ItemGroup>
     <None Include="Images\language\flag_ua.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\WhiteThemeMinimizeWindow_20.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\WhiteThemeRestoreDown_20.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\WhiteThemeFullScreen_20.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

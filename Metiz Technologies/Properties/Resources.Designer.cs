@@ -193,9 +193,39 @@ namespace Metiz_Technologies.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WhiteThemeFullScreen_20 {
+            get {
+                object obj = ResourceManager.GetObject("WhiteThemeFullScreen_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteThemeMinimizeWindow_20 {
+            get {
+                object obj = ResourceManager.GetObject("WhiteThemeMinimizeWindow_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhiteThemePassword_20 {
             get {
                 object obj = ResourceManager.GetObject("WhiteThemePassword_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteThemeRestoreDown_20 {
+            get {
+                object obj = ResourceManager.GetObject("WhiteThemeRestoreDown_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
