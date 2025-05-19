@@ -1,5 +1,7 @@
 ﻿using Metiz_Technologies.Classes;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Metiz_Technologies.User_Controls
@@ -13,7 +15,7 @@ namespace Metiz_Technologies.User_Controls
         public HeaderBar_userControl()
         {
             InitializeComponent();
-
+            
             companyName_lbl.Text = CompanyInfo.CompanyName;
 
             // Stop dragging when the mouse button is released
@@ -42,7 +44,41 @@ namespace Metiz_Technologies.User_Controls
                 }
             };
 
+            us_panel.Click += (s, a) => { ChangeLang("us"); };
+            ru_panel.Click += (s, a) => { ChangeLang("ru"); };
+            ua_panel.Click += (s, a) => { ChangeLang("ua"); };
+
             close_btn.Click += (s, a) => { Application.Exit(); };
+        }
+
+        internal static Dictionary<string, string> translations = new Dictionary<string, string>
+        {
+            { "userName_lbl", "User Name" },
+            { "userPassword_lbl", "Password" },
+            { "showPassword_chb", "Show Password" },
+            { "userEmail_lbl", "Email" },
+            { "forgotPassword_lbl", "Forgot Password" },
+            { "login_btn", "Login" },
+            { "register_btn", "Register" },
+            { "createNewAcc_lbl", "Create New Account" },
+            { "loginHere_lbl", "Login Here" },
+            { "welcomeBack_lbl", "Welcome Back" },
+            { "getStarted_lbl", "Get Started" }
+        };
+
+        internal void ChangeLang(string lang)
+        {
+            CompanyInfo.programLanguage = lang;
+
+            foreach (var entry in translations)
+            {
+                // Определяем, где искать элементы: сначала в Parent, затем в текущей форме
+                Control control = this.Parent?.Controls.Find(entry.Key, true).FirstOrDefault()
+                                  ?? this.Controls.Find(entry.Key, true).FirstOrDefault();
+
+                if (control != null)
+                    control.Text = GlobalTranslation.ProgramLanguage(CompanyInfo.programLanguage, entry.Value);
+            }
         }
     }
 }

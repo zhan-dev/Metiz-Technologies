@@ -17,6 +17,8 @@ namespace Metiz_Technologies
                 FormFadeInFadeOut formFadeIn = new FormFadeInFadeOut(this, true);
                 formFadeIn.StartTimer();
 
+                headerBarLogin_userControl.ChangeLang(CompanyInfo.programLanguage);
+
                 userName_txt.Text = "zhk";
                 userPassword_txt.Text = "dall";
             };

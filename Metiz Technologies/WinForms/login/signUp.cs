@@ -16,6 +16,8 @@ namespace Metiz_Technologies
             {
                 FormFadeInFadeOut formFadeIn = new FormFadeInFadeOut(this, true);
                 formFadeIn.StartTimer();
+
+                headerBarSignUp_userControl.ChangeLang(CompanyInfo.programLanguage);
             };
 
             loginHere_lbl.LinkClicked += (s, a) =>

@@ -42,7 +42,7 @@
             this.createNewAcc_lbl = new System.Windows.Forms.LinkLabel();
             this.loginGif_pb = new System.Windows.Forms.PictureBox();
             this.welcomeBack_lbl = new System.Windows.Forms.Label();
-            this.headerBar_userControl = new Metiz_Technologies.User_Controls.HeaderBar_userControl();
+            this.headerBarLogin_userControl = new Metiz_Technologies.User_Controls.HeaderBar_userControl();
             this.login_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginGif_pb)).BeginInit();
             this.SuspendLayout();
@@ -133,25 +133,26 @@
             this.showPassword_chb.BackColor = System.Drawing.Color.Transparent;
             this.showPassword_chb.ForeColor = System.Drawing.Color.White;
             this.showPassword_chb.Location = new System.Drawing.Point(158, 159);
-            this.showPassword_chb.Margin = new System.Windows.Forms.Padding(4);
+            this.showPassword_chb.Margin = new System.Windows.Forms.Padding(0);
             this.showPassword_chb.Name = "showPassword_chb";
             this.showPassword_chb.Size = new System.Drawing.Size(129, 24);
             this.showPassword_chb.TabIndex = 3;
             this.showPassword_chb.Text = "Show Password";
+            this.showPassword_chb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.showPassword_chb.UseVisualStyleBackColor = false;
             // 
             // forgotPassword_lbl
             // 
             this.forgotPassword_lbl.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.forgotPassword_lbl.AutoSize = true;
             this.forgotPassword_lbl.LinkColor = System.Drawing.Color.DarkGray;
-            this.forgotPassword_lbl.Location = new System.Drawing.Point(109, 244);
+            this.forgotPassword_lbl.Location = new System.Drawing.Point(50, 244);
             this.forgotPassword_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.forgotPassword_lbl.Name = "forgotPassword_lbl";
-            this.forgotPassword_lbl.Size = new System.Drawing.Size(118, 20);
+            this.forgotPassword_lbl.Size = new System.Drawing.Size(237, 20);
             this.forgotPassword_lbl.TabIndex = 4;
             this.forgotPassword_lbl.TabStop = true;
             this.forgotPassword_lbl.Text = "Forgot Password";
+            this.forgotPassword_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // login_btn
             // 
@@ -171,15 +172,15 @@
             // createNewAcc_lbl
             // 
             this.createNewAcc_lbl.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.createNewAcc_lbl.AutoSize = true;
             this.createNewAcc_lbl.LinkColor = System.Drawing.Color.DarkGray;
-            this.createNewAcc_lbl.Location = new System.Drawing.Point(96, 334);
+            this.createNewAcc_lbl.Location = new System.Drawing.Point(49, 334);
             this.createNewAcc_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.createNewAcc_lbl.Name = "createNewAcc_lbl";
-            this.createNewAcc_lbl.Size = new System.Drawing.Size(144, 20);
+            this.createNewAcc_lbl.Size = new System.Drawing.Size(237, 20);
             this.createNewAcc_lbl.TabIndex = 6;
             this.createNewAcc_lbl.TabStop = true;
             this.createNewAcc_lbl.Text = "Create New Account";
+            this.createNewAcc_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // loginGif_pb
             // 
@@ -195,26 +196,26 @@
             // 
             // welcomeBack_lbl
             // 
-            this.welcomeBack_lbl.AutoSize = true;
             this.welcomeBack_lbl.BackColor = System.Drawing.Color.Transparent;
             this.welcomeBack_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.welcomeBack_lbl.ForeColor = System.Drawing.Color.DarkGray;
-            this.welcomeBack_lbl.Location = new System.Drawing.Point(691, 448);
+            this.welcomeBack_lbl.Location = new System.Drawing.Point(652, 448);
             this.welcomeBack_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeBack_lbl.Name = "welcomeBack_lbl";
-            this.welcomeBack_lbl.Size = new System.Drawing.Size(96, 19);
+            this.welcomeBack_lbl.Size = new System.Drawing.Size(135, 19);
             this.welcomeBack_lbl.TabIndex = 8;
             this.welcomeBack_lbl.Text = "Welcome Back";
+            this.welcomeBack_lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // headerBar_userControl
+            // headerBarLogin_userControl
             // 
-            this.headerBar_userControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerBar_userControl.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.headerBar_userControl.Location = new System.Drawing.Point(0, 0);
-            this.headerBar_userControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.headerBar_userControl.Name = "headerBar_userControl";
-            this.headerBar_userControl.Size = new System.Drawing.Size(800, 36);
-            this.headerBar_userControl.TabIndex = 9;
+            this.headerBarLogin_userControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerBarLogin_userControl.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.headerBarLogin_userControl.Location = new System.Drawing.Point(0, 0);
+            this.headerBarLogin_userControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.headerBarLogin_userControl.Name = "headerBarLogin_userControl";
+            this.headerBarLogin_userControl.Size = new System.Drawing.Size(800, 36);
+            this.headerBarLogin_userControl.TabIndex = 9;
             // 
             // login_form
             // 
@@ -224,7 +225,7 @@
             this.BackgroundImage = global::Metiz_Technologies.Properties.Resources.loginAnimatedBackgroundAsImg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 476);
-            this.Controls.Add(this.headerBar_userControl);
+            this.Controls.Add(this.headerBarLogin_userControl);
             this.Controls.Add(this.welcomeBack_lbl);
             this.Controls.Add(this.login_panel);
             this.Controls.Add(this.loginGif_pb);
@@ -240,7 +241,6 @@
             this.login_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginGif_pb)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -259,7 +259,7 @@
         private System.Windows.Forms.Panel userPassword_panel;
         private System.Windows.Forms.Panel userName_panel;
         private System.Windows.Forms.Label welcomeBack_lbl;
-        private User_Controls.HeaderBar_userControl headerBar_userControl;
+        private User_Controls.HeaderBar_userControl headerBarLogin_userControl;
     }
 }
 
