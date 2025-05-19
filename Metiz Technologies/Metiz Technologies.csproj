@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Classes\CompanyInfo.cs" />
     <Compile Include="Classes\FormFadeInFadeOut.cs" />
+    <Compile Include="Classes\GlobalTranslation.cs" />
     <Compile Include="Classes\mainFormActions.cs" />
     <Compile Include="Classes\FileLoad.cs" />
     <Compile Include="Classes\Messages.cs" />
@@ -96,11 +97,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinForms\login\signUp_form.cs">
+    <Compile Include="WinForms\login\signUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\login\signUp_form.Designer.cs">
-      <DependentUpon>signUp_form.cs</DependentUpon>
+    <Compile Include="WinForms\login\signUp.Designer.cs">
+      <DependentUpon>signUp.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Reports_userControl.cs">
       <SubType>UserControl</SubType>
@@ -127,8 +128,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WinForms\login\signUp_form.resx">
-      <DependentUpon>signUp_form.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\login\signUp.resx">
+      <DependentUpon>signUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Reports_userControl.resx">
       <DependentUpon>Reports_userControl.cs</DependentUpon>
@@ -196,25 +197,7 @@
     <None Include="Images\Icons\BlackDownloadFromTheCloud_150.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Icons\GreenDownloadFromTheCloud_150.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Icons\GreenUploadToTheCloud_150.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Icons\blackArrowToLeft_40.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Icons\blackArrowToRight_40_.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Icons\blackArrowToRight_40.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Icons\BlackArrowToRight_30.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Icons\BlackArrowToLeft_20.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Icons\BlackArrowToLeft_25.ico" />
@@ -224,6 +207,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\language\flag_us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\language\flag_ru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\language\flag_ua.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace Metiz_Technologies
 {
-    partial class signUp_form
+    partial class signUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signUp_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signUp));
             this.signUpGif_pb = new System.Windows.Forms.PictureBox();
             this.signUp_panel = new System.Windows.Forms.Panel();
             this.userName_lbl = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.register_btn = new System.Windows.Forms.Button();
             this.loginHere_lbl = new System.Windows.Forms.LinkLabel();
             this.getStarted_lbl = new System.Windows.Forms.Label();
+            this.headerBarSignUp_userControl = new Metiz_Technologies.User_Controls.HeaderBar_userControl();
             this.headerBar_userControl = new Metiz_Technologies.User_Controls.HeaderBar_userControl();
             ((System.ComponentModel.ISupportInitialize)(this.signUpGif_pb)).BeginInit();
             this.signUp_panel.SuspendLayout();
@@ -202,28 +203,38 @@
             // loginHere_lbl
             // 
             this.loginHere_lbl.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.loginHere_lbl.AutoSize = true;
             this.loginHere_lbl.LinkColor = System.Drawing.Color.DarkGray;
-            this.loginHere_lbl.Location = new System.Drawing.Point(127, 334);
+            this.loginHere_lbl.Location = new System.Drawing.Point(49, 334);
             this.loginHere_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginHere_lbl.Name = "loginHere_lbl";
-            this.loginHere_lbl.Size = new System.Drawing.Size(82, 20);
+            this.loginHere_lbl.Size = new System.Drawing.Size(238, 20);
             this.loginHere_lbl.TabIndex = 6;
             this.loginHere_lbl.TabStop = true;
             this.loginHere_lbl.Text = "Login Here";
+            this.loginHere_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // getStarted_lbl
             // 
-            this.getStarted_lbl.AutoSize = true;
             this.getStarted_lbl.BackColor = System.Drawing.Color.Transparent;
             this.getStarted_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.getStarted_lbl.ForeColor = System.Drawing.Color.DarkGray;
-            this.getStarted_lbl.Location = new System.Drawing.Point(708, 448);
+            this.getStarted_lbl.Location = new System.Drawing.Point(652, 448);
             this.getStarted_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.getStarted_lbl.Name = "getStarted_lbl";
-            this.getStarted_lbl.Size = new System.Drawing.Size(79, 19);
+            this.getStarted_lbl.Size = new System.Drawing.Size(135, 19);
             this.getStarted_lbl.TabIndex = 9;
             this.getStarted_lbl.Text = "Get Started";
+            this.getStarted_lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // headerBarSignUp_userControl
+            // 
+            this.headerBarSignUp_userControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerBarSignUp_userControl.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.headerBarSignUp_userControl.Location = new System.Drawing.Point(0, 0);
+            this.headerBarSignUp_userControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.headerBarSignUp_userControl.Name = "headerBarSignUp_userControl";
+            this.headerBarSignUp_userControl.Size = new System.Drawing.Size(800, 36);
+            this.headerBarSignUp_userControl.TabIndex = 10;
             // 
             // headerBar_userControl
             // 
@@ -235,7 +246,7 @@
             this.headerBar_userControl.Size = new System.Drawing.Size(800, 36);
             this.headerBar_userControl.TabIndex = 10;
             // 
-            // signUp_form
+            // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,7 +254,7 @@
             this.BackgroundImage = global::Metiz_Technologies.Properties.Resources.loginAnimatedBackgroundAsImg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 476);
-            this.Controls.Add(this.headerBar_userControl);
+            this.Controls.Add(this.headerBarSignUp_userControl);
             this.Controls.Add(this.getStarted_lbl);
             this.Controls.Add(this.signUp_panel);
             this.Controls.Add(this.signUpGif_pb);
@@ -252,14 +263,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "signUp_form";
+            this.Name = "signUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signUp";
             ((System.ComponentModel.ISupportInitialize)(this.signUpGif_pb)).EndInit();
             this.signUp_panel.ResumeLayout(false);
             this.signUp_panel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -280,5 +290,6 @@
         private System.Windows.Forms.TextBox userEmail_txt;
         private System.Windows.Forms.Label getStarted_lbl;
         private User_Controls.HeaderBar_userControl headerBar_userControl;
+        private User_Controls.HeaderBar_userControl headerBarSignUp_userControl;
     }
 }

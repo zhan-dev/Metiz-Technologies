@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace Metiz_Technologies
 {
-    public partial class signUp_form : Form
+    public partial class signUp : Form
     {
-        public signUp_form()
+        public signUp()
         {
             InitializeComponent();
 
@@ -16,6 +16,8 @@ namespace Metiz_Technologies
             {
                 FormFadeInFadeOut formFadeIn = new FormFadeInFadeOut(this, true);
                 formFadeIn.StartTimer();
+
+                headerBarSignUp_userControl.ChangeLang(CompanyInfo.programLanguage);
             };
 
             loginHere_lbl.LinkClicked += (s, a) =>
