@@ -29,7 +29,7 @@ namespace Metiz_Technologies
             };
 
             this.Shown += (s, a) => {
-                //login_btn.PerformClick();
+                login_btn.PerformClick();
             };
 
             createNewAcc_lbl.LinkClicked += (s, a) =>

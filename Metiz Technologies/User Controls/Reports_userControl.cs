@@ -47,7 +47,7 @@ namespace Metiz_Technologies.User_Controls
                         foreach (DataTable table in tableCollection)
                             cboSheet_cb.Items.Add(table.TableName); //add sheet to combobox
 
-                        productData_dgv.DataSource = result.Tables[0]; // As default open List №1
+                        expensesData_dgv.DataSource = result.Tables[0]; // As default open List №1
                         cboSheet_cb.Text = cboSheet_cb.Items[0].ToString(); //As default in combobox loaded List №1
                     }
                 }
@@ -92,25 +92,25 @@ namespace Metiz_Technologies.User_Controls
 
                 if (dt.Rows.Count > 0)
                 {
-                    productData_dgv.DataSource = dt;
+                    expensesData_dgv.DataSource = dt;
                 }
             }
             // Замена разделителя '.' на ','
-            for (int i = 0; i < productData_dgv.Rows.Count; ++i)
+            for (int i = 0; i < expensesData_dgv.Rows.Count; ++i)
             {
-                productData_dgv[1, i].Value = productData_dgv[1, i].Value.ToString().Replace('.', ',');
-                productData_dgv[2, i].Value = productData_dgv[2, i].Value.ToString().Replace('.', ',');
+                expensesData_dgv[1, i].Value = expensesData_dgv[1, i].Value.ToString().Replace('.', ',');
+                expensesData_dgv[2, i].Value = expensesData_dgv[2, i].Value.ToString().Replace('.', ',');
             }
         }
 
         private void GeneralDataCorrections()
         {
             //Работа с загруженным материалом
-            product_lbl.Text = productData_dgv[2, 2].Value.ToString();
+            product_lbl.Text = expensesData_dgv[2, 2].Value.ToString();
             product_lbl.Text = product_lbl.Text.Substring(product_lbl.Text.IndexOf(":") + 2);
 
-            endDate_txt.Text = productData_dgv[2, 0].Value.ToString();
-            startDate_txt.Text = productData_dgv[2, 1].Value.ToString();
+            endDate_txt.Text = expensesData_dgv[2, 0].Value.ToString();
+            startDate_txt.Text = expensesData_dgv[2, 1].Value.ToString();
 
             endDate_txt.Text = endDate_txt.Text.Substring(endDate_txt.Text.IndexOf(":") + 2);
             startDate_txt.Text = startDate_txt.Text.Substring(startDate_txt.Text.IndexOf(":") + 2);
@@ -126,54 +126,54 @@ namespace Metiz_Technologies.User_Controls
             date_txt.Text = months.ToString();
 
             //Перезапись названия столбцов
-            foreach (DataGridViewColumn item in productData_dgv.Columns)
+            foreach (DataGridViewColumn item in expensesData_dgv.Columns)
             {
                 //переприсвоение дат
-                productData_dgv[item.Index, 4].Value = 
-                    productData_dgv[item.Index, 4].Value.ToString() == "" ?
-                    productData_dgv[item.Index - 1, 4].Value.ToString() : productData_dgv[item.Index, 4].Value.ToString();
+                expensesData_dgv[item.Index, 4].Value = 
+                    expensesData_dgv[item.Index, 4].Value.ToString() == "" ?
+                    expensesData_dgv[item.Index - 1, 4].Value.ToString() : expensesData_dgv[item.Index, 4].Value.ToString();
 
-                productData_dgv[item.Index, 4].Value = 
-                    productData_dgv[item.Index, 4].Value.ToString().Contains("12:00:00 AM") ?
-                    productData_dgv[item.Index, 4].Value.ToString().Replace(" 12:00:00 AM", "") : 
-                    productData_dgv[item.Index, 4].Value.ToString();
+                expensesData_dgv[item.Index, 4].Value = 
+                    expensesData_dgv[item.Index, 4].Value.ToString().Contains("12:00:00 AM") ?
+                    expensesData_dgv[item.Index, 4].Value.ToString().Replace(" 12:00:00 AM", "") : 
+                    expensesData_dgv[item.Index, 4].Value.ToString();
 
-                productData_dgv[item.Index, 4].Value = 
-                    productData_dgv[item.Index, 4].Value.ToString().Contains("Номенклатура.") ?
-                    productData_dgv[item.Index, 4].Value.ToString().Replace("Номенклатура.", "") : 
-                    productData_dgv[item.Index, 4].Value.ToString();
+                expensesData_dgv[item.Index, 4].Value = 
+                    expensesData_dgv[item.Index, 4].Value.ToString().Contains("Номенклатура.") ?
+                    expensesData_dgv[item.Index, 4].Value.ToString().Replace("Номенклатура.", "") : 
+                    expensesData_dgv[item.Index, 4].Value.ToString();
 
-                productData_dgv[item.Index, 5].Value = 
-                    productData_dgv[item.Index, 5].Value.ToString().Contains("Количество") ?
-                    productData_dgv[item.Index, 5].Value.ToString().Replace("Количество ", "") : 
-                    productData_dgv[item.Index, 5].Value.ToString();
+                expensesData_dgv[item.Index, 5].Value = 
+                    expensesData_dgv[item.Index, 5].Value.ToString().Contains("Количество") ?
+                    expensesData_dgv[item.Index, 5].Value.ToString().Replace("Количество ", "") : 
+                    expensesData_dgv[item.Index, 5].Value.ToString();
 
-                productData_dgv.Columns[item.Index].HeaderText =
-                    $"{productData_dgv[item.Index, 4].Value.ToString()}\n{productData_dgv[item.Index, 5].Value.ToString()}";
+                expensesData_dgv.Columns[item.Index].HeaderText =
+                    $"{expensesData_dgv[item.Index, 4].Value.ToString()}\n{expensesData_dgv[item.Index, 5].Value.ToString()}";
 
 
-                string getHeight = productData_dgv.ColumnHeadersHeight.ToString();
-                productData_dgv.Columns[item.Index].Width = 100 + Convert.ToInt32(getHeight);
+                string getHeight = expensesData_dgv.ColumnHeadersHeight.ToString();
+                expensesData_dgv.Columns[item.Index].Width = 100 + Convert.ToInt32(getHeight);
             }
 
             //костыльное Удаление лишних столбцов и строк
-            int colIndex = productData_dgv.CurrentCell.ColumnIndex;
-            int rowIndex = productData_dgv.CurrentCell.RowIndex;
+            int colIndex = expensesData_dgv.CurrentCell.ColumnIndex;
+            int rowIndex = expensesData_dgv.CurrentCell.RowIndex;
 
-            productData_dgv.Columns.RemoveAt(colIndex + 1);
-            productData_dgv.Columns.RemoveAt(colIndex + 1);
-            productData_dgv.Columns.RemoveAt(colIndex + 2);
+            expensesData_dgv.Columns.RemoveAt(colIndex + 1);
+            expensesData_dgv.Columns.RemoveAt(colIndex + 1);
+            expensesData_dgv.Columns.RemoveAt(colIndex + 2);
 
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
-            productData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
+            expensesData_dgv.Rows.RemoveAt(rowIndex);
 
             //удаление последней строки с итогом (2 потому что таблицу можно редактировать и посл. строка пустая)
-            productData_dgv.Rows.RemoveAt(productData_dgv.Rows.Count - 2);
+            expensesData_dgv.Rows.RemoveAt(expensesData_dgv.Rows.Count - 2);
 
             //Зануление таблицы
             DataTableToNull();
@@ -181,27 +181,27 @@ namespace Metiz_Technologies.User_Controls
 
         private void DataTableToNull()
         {
-            foreach (DataGridViewColumn itemCol in this.productData_dgv.Columns)
+            foreach (DataGridViewColumn itemCol in this.expensesData_dgv.Columns)
             {
                 int j = itemCol.Index;
 
-                foreach (DataGridViewRow itemRow in this.productData_dgv.Rows)
+                foreach (DataGridViewRow itemRow in this.expensesData_dgv.Rows)
                 {
                     int i = itemRow.Index;
 
-                    productData_dgv.Rows[i].Cells[j].Value = 
-                        productData_dgv.Rows[i].Cells[j].Value is DBNull ? 0 : productData_dgv.Rows[i].Cells[j].Value;
+                    expensesData_dgv.Rows[i].Cells[j].Value = 
+                        expensesData_dgv.Rows[i].Cells[j].Value is DBNull ? 0 : expensesData_dgv.Rows[i].Cells[j].Value;
                 }
             }
         }
 
         private void DGVRowsDel()
         {
-            int rowIndex = productData_dgv.CurrentCell.RowIndex;
+            int rowIndex = expensesData_dgv.CurrentCell.RowIndex;
             int countRows = 0;
             do
             {
-                productData_dgv.Rows.RemoveAt(rowIndex);
+                expensesData_dgv.Rows.RemoveAt(rowIndex);
                 countRows++;
             } while (countRows < 4);
 
@@ -211,11 +211,11 @@ namespace Metiz_Technologies.User_Controls
         
         private void DGVColumnsDel(int colStarts)
         {
-            int colIndex = productData_dgv.CurrentCell.ColumnIndex + colStarts;
+            int colIndex = expensesData_dgv.CurrentCell.ColumnIndex + colStarts;
             int countColumns = 0;
             do
             {
-                productData_dgv.Columns.RemoveAt(colIndex);
+                expensesData_dgv.Columns.RemoveAt(colIndex);
                 countColumns++;
             } while (countColumns < 4);
         }
@@ -224,24 +224,24 @@ namespace Metiz_Technologies.User_Controls
         {
             int strErrCount = 0;
 
-            foreach (DataGridViewColumn itemCol in this.productData_dgv.Columns)
+            foreach (DataGridViewColumn itemCol in this.expensesData_dgv.Columns)
             {
                 int j = itemCol.Index;
 
-                if ((productData_dgv.Columns[itemCol.Index].HeaderText == "Количество ПРО") &&
-                    (productData_dgv.Columns[itemCol.Index + 1].HeaderText == "Количество продажа"))
+                if ((expensesData_dgv.Columns[itemCol.Index].HeaderText == "Количество ПРО") &&
+                    (expensesData_dgv.Columns[itemCol.Index + 1].HeaderText == "Количество продажа"))
                 {
-                    productData_dgv.Columns[itemCol.Index - 1].HeaderText =
+                    expensesData_dgv.Columns[itemCol.Index - 1].HeaderText =
                                 $"\n ПРО + Продажа";
 
-                    foreach (DataGridViewRow itemRow in this.productData_dgv.Rows)
+                    foreach (DataGridViewRow itemRow in this.expensesData_dgv.Rows)
                     {
                         int i = itemRow.Index;
 
                         try
                         {
-                            productData_dgv.Rows[i].Cells[j - 1].Value = Convert.ToDouble(productData_dgv.Rows[i].Cells[j].Value) +
-                                                             Convert.ToDouble(productData_dgv.Rows[i].Cells[j + 1].Value);
+                            expensesData_dgv.Rows[i].Cells[j - 1].Value = Convert.ToDouble(expensesData_dgv.Rows[i].Cells[j].Value) +
+                                                             Convert.ToDouble(expensesData_dgv.Rows[i].Cells[j + 1].Value);
                         }
                         //catch (Exception ex)
                         //{
@@ -277,43 +277,43 @@ namespace Metiz_Technologies.User_Controls
 
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
-            if (reportsSidebarLeft_panel.Width == 200)
+            if (reportsMenuSidebar_panel.Width == 200)
             {
                 dashboard_btn.Image = Resources.BlackDrag_List_Down_40;
-                reportsSidebarLeft_panel.Width = 52;
+                reportsMenuSidebar_panel.Width = 52;
                 dashboard_btn.Text = "";
-                SpendingOrder_btn.Text = "";
+                expenses_btn.Text = "";
             }
             else
             {
                 dashboard_btn.Image = Resources.BlackBulleted_List_40;
-                reportsSidebarLeft_panel.Width = 200;
+                reportsMenuSidebar_panel.Width = 200;
                 dashboard_btn.Text = "Dashboard";
-                SpendingOrder_btn.Text = "Прогноз закупок";
+                expenses_btn.Text = "Прогноз закупок";
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            markAsActive_panel.Top = button3_btn.Top;
+            markAsActive_panel.Top = salary_btn.Top;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            markAsActive_panel.Top = button4_btn.Top;
+            markAsActive_panel.Top = incomingMoney_btn.Top;
         }
 
         private void purchasePrediction_btn_Click(object sender, EventArgs e)
         {
-            markAsActive_panel.Top = SpendingOrder_btn.Top;
+            markAsActive_panel.Top = expenses_btn.Top;
         }
 
         private void CleanDGVTable()
         {
-            int count = this.productData_dgv.Columns.Count;
+            int count = this.expensesData_dgv.Columns.Count;
             for (int i = 0; i < count; i++)     // цикл удаления всех столбцов
             {
-                this.productData_dgv.Columns.RemoveAt(0);
+                this.expensesData_dgv.Columns.RemoveAt(0);
             }
         }
 
@@ -403,7 +403,7 @@ namespace Metiz_Technologies.User_Controls
         {
             //Для переключение cboSheet
             DataTable dt = tableCollection[cboSheet_cb.SelectedItem.ToString()];
-            productData_dgv.DataSource = dt;
+            expensesData_dgv.DataSource = dt;
         }
 
         private void cboSheet_cb_KeyPress(object sender, KeyPressEventArgs e)
@@ -413,19 +413,19 @@ namespace Metiz_Technologies.User_Controls
 
         private void UIpanel_btn_Click(object sender, EventArgs e)
         {
-            if (reportsSidebarRight_panel.Width == 200)
+            if (reportsAdditionalSidebar_panel.Width == 200)
             {
-                UIpanel_btn.Image = Resources.BlackArrowToLeft_25;
-                UIpanel_btn.ImageAlign = ContentAlignment.MiddleCenter;
-                reportsSidebarRight_panel.Width = 52;
-                SpendingOrderUI_panel.Visible = false;
+                hidePanel_btn.Image = Resources.BlackArrowToLeft_25;
+                hidePanel_btn.ImageAlign = ContentAlignment.MiddleCenter;
+                reportsAdditionalSidebar_panel.Width = 52;
+                additional_panel.Visible = false;
             }
             else
             {
-                UIpanel_btn.Image = Resources.BlackArrowToRight_25;
-                UIpanel_btn.ImageAlign = ContentAlignment.MiddleLeft;
-                reportsSidebarRight_panel.Width = 200;
-                SpendingOrderUI_panel.Visible = true;
+                hidePanel_btn.Image = Resources.BlackArrowToRight_25;
+                hidePanel_btn.ImageAlign = ContentAlignment.MiddleLeft;
+                reportsAdditionalSidebar_panel.Width = 200;
+                additional_panel.Visible = true;
             }
         }
     }
