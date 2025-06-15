@@ -28,53 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportsSidebarLeft_panel = new System.Windows.Forms.Panel();
+            this.reportsMenuSidebar_panel = new System.Windows.Forms.Panel();
+            this.traffic_btn = new System.Windows.Forms.Button();
+            this.money_btn = new System.Windows.Forms.Button();
+            this.route_btn = new System.Windows.Forms.Button();
+            this.awardsWorkers_btn = new System.Windows.Forms.Button();
+            this.factory_btn = new System.Windows.Forms.Button();
+            this.reportOther_btn = new System.Windows.Forms.Button();
             this.markAsActive_panel = new System.Windows.Forms.Panel();
-            this.button4_btn = new System.Windows.Forms.Button();
-            this.button3_btn = new System.Windows.Forms.Button();
-            this.SpendingOrder_btn = new System.Windows.Forms.Button();
+            this.incomingMoney_btn = new System.Windows.Forms.Button();
+            this.salary_btn = new System.Windows.Forms.Button();
+            this.expenses_btn = new System.Windows.Forms.Button();
             this.dashboard_btn = new System.Windows.Forms.Button();
-            this.productAnalysis_tabControl = new System.Windows.Forms.TabControl();
-            this.productData_tabPage = new System.Windows.Forms.TabPage();
-            this.productData_dgv = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.reportsSidebarRight_panel = new System.Windows.Forms.Panel();
-            this.UIpanel_btn = new System.Windows.Forms.Button();
-            this.SpendingOrderUI_panel = new System.Windows.Forms.Panel();
+            this.expenses_tabControl = new System.Windows.Forms.TabControl();
+            this.data_tabPage = new System.Windows.Forms.TabPage();
+            this.expensesData_dgv = new System.Windows.Forms.DataGridView();
+            this.data2_tabPage = new System.Windows.Forms.TabPage();
+            this.data3_tabPage = new System.Windows.Forms.TabPage();
+            this.reportsAdditionalSidebar_panel = new System.Windows.Forms.Panel();
+            this.hidePanel_btn = new System.Windows.Forms.Button();
+            this.additional_panel = new System.Windows.Forms.Panel();
             this.dragANDdrop_lbl = new System.Windows.Forms.Label();
             this.import_panel = new System.Windows.Forms.Panel();
-            this.cboSheet_cb = new System.Windows.Forms.ComboBox();
-            this.export_pictureBox = new System.Windows.Forms.PictureBox();
-            this.button1_btn = new System.Windows.Forms.Button();
-            this.product_lbl = new System.Windows.Forms.Label();
-            this.endDate_txt = new System.Windows.Forms.TextBox();
-            this.startDate_txt = new System.Windows.Forms.TextBox();
-            this.date_txt = new System.Windows.Forms.TextBox();
-            this.filePath_txt = new System.Windows.Forms.TextBox();
             this.filePath_lbl = new System.Windows.Forms.Label();
-            this.reportsSidebarLeft_panel.SuspendLayout();
-            this.productAnalysis_tabControl.SuspendLayout();
-            this.productData_tabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productData_dgv)).BeginInit();
-            this.reportsSidebarRight_panel.SuspendLayout();
-            this.SpendingOrderUI_panel.SuspendLayout();
+            this.cboSheet_cb = new System.Windows.Forms.ComboBox();
+            this.filePath_txt = new System.Windows.Forms.TextBox();
+            this.product_lbl = new System.Windows.Forms.Label();
+            this.date_txt = new System.Windows.Forms.TextBox();
+            this.startDate_txt = new System.Windows.Forms.TextBox();
+            this.endDate_txt = new System.Windows.Forms.TextBox();
+            this.getResult_btn = new System.Windows.Forms.Button();
+            this.export_pictureBox = new System.Windows.Forms.PictureBox();
+            this.reportsMenuSidebar_panel.SuspendLayout();
+            this.expenses_tabControl.SuspendLayout();
+            this.data_tabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expensesData_dgv)).BeginInit();
+            this.reportsAdditionalSidebar_panel.SuspendLayout();
+            this.additional_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.export_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportsSidebarLeft_panel
+            // reportsMenuSidebar_panel
             // 
-            this.reportsSidebarLeft_panel.BackColor = System.Drawing.Color.Gainsboro;
-            this.reportsSidebarLeft_panel.Controls.Add(this.markAsActive_panel);
-            this.reportsSidebarLeft_panel.Controls.Add(this.button4_btn);
-            this.reportsSidebarLeft_panel.Controls.Add(this.button3_btn);
-            this.reportsSidebarLeft_panel.Controls.Add(this.SpendingOrder_btn);
-            this.reportsSidebarLeft_panel.Controls.Add(this.dashboard_btn);
-            this.reportsSidebarLeft_panel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.reportsSidebarLeft_panel.Location = new System.Drawing.Point(0, 0);
-            this.reportsSidebarLeft_panel.Name = "reportsSidebarLeft_panel";
-            this.reportsSidebarLeft_panel.Size = new System.Drawing.Size(200, 524);
-            this.reportsSidebarLeft_panel.TabIndex = 14;
+            this.reportsMenuSidebar_panel.BackColor = System.Drawing.Color.Gainsboro;
+            this.reportsMenuSidebar_panel.Controls.Add(this.markAsActive_panel);
+            this.reportsMenuSidebar_panel.Controls.Add(this.traffic_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.money_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.route_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.awardsWorkers_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.factory_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.reportOther_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.incomingMoney_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.salary_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.expenses_btn);
+            this.reportsMenuSidebar_panel.Controls.Add(this.dashboard_btn);
+            this.reportsMenuSidebar_panel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.reportsMenuSidebar_panel.Location = new System.Drawing.Point(0, 0);
+            this.reportsMenuSidebar_panel.Name = "reportsMenuSidebar_panel";
+            this.reportsMenuSidebar_panel.Size = new System.Drawing.Size(200, 524);
+            this.reportsMenuSidebar_panel.TabIndex = 14;
+            // 
+            // traffic_btn
+            // 
+            this.traffic_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.traffic_btn.FlatAppearance.BorderSize = 0;
+            this.traffic_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.traffic_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.traffic_btn.Location = new System.Drawing.Point(0, 360);
+            this.traffic_btn.Name = "traffic_btn";
+            this.traffic_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.traffic_btn.Size = new System.Drawing.Size(200, 40);
+            this.traffic_btn.TabIndex = 9;
+            this.traffic_btn.Text = "Движение";
+            this.traffic_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.traffic_btn.UseVisualStyleBackColor = true;
+            // 
+            // money_btn
+            // 
+            this.money_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.money_btn.FlatAppearance.BorderSize = 0;
+            this.money_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.money_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.money_btn.Location = new System.Drawing.Point(0, 320);
+            this.money_btn.Name = "money_btn";
+            this.money_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.money_btn.Size = new System.Drawing.Size(200, 40);
+            this.money_btn.TabIndex = 8;
+            this.money_btn.Text = "Денежные средства";
+            this.money_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.money_btn.UseVisualStyleBackColor = true;
+            // 
+            // route_btn
+            // 
+            this.route_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.route_btn.FlatAppearance.BorderSize = 0;
+            this.route_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.route_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.route_btn.Location = new System.Drawing.Point(0, 280);
+            this.route_btn.Name = "route_btn";
+            this.route_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.route_btn.Size = new System.Drawing.Size(200, 40);
+            this.route_btn.TabIndex = 7;
+            this.route_btn.Text = "Маршрут";
+            this.route_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.route_btn.UseVisualStyleBackColor = true;
+            // 
+            // awardsWorkers_btn
+            // 
+            this.awardsWorkers_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.awardsWorkers_btn.FlatAppearance.BorderSize = 0;
+            this.awardsWorkers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.awardsWorkers_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.awardsWorkers_btn.Location = new System.Drawing.Point(0, 240);
+            this.awardsWorkers_btn.Name = "awardsWorkers_btn";
+            this.awardsWorkers_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.awardsWorkers_btn.Size = new System.Drawing.Size(200, 40);
+            this.awardsWorkers_btn.TabIndex = 6;
+            this.awardsWorkers_btn.Text = "Премии рабочих";
+            this.awardsWorkers_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.awardsWorkers_btn.UseVisualStyleBackColor = true;
+            // 
+            // factory_btn
+            // 
+            this.factory_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.factory_btn.FlatAppearance.BorderSize = 0;
+            this.factory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.factory_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.factory_btn.Location = new System.Drawing.Point(0, 200);
+            this.factory_btn.Name = "factory_btn";
+            this.factory_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.factory_btn.Size = new System.Drawing.Size(200, 40);
+            this.factory_btn.TabIndex = 5;
+            this.factory_btn.Text = "ПРО";
+            this.factory_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.factory_btn.UseVisualStyleBackColor = true;
+            // 
+            // reportOther_btn
+            // 
+            this.reportOther_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reportOther_btn.FlatAppearance.BorderSize = 0;
+            this.reportOther_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportOther_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportOther_btn.Location = new System.Drawing.Point(0, 160);
+            this.reportOther_btn.Name = "reportOther_btn";
+            this.reportOther_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.reportOther_btn.Size = new System.Drawing.Size(200, 40);
+            this.reportOther_btn.TabIndex = 4;
+            this.reportOther_btn.Text = "Отчёт прочее";
+            this.reportOther_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportOther_btn.UseVisualStyleBackColor = true;
             // 
             // markAsActive_panel
             // 
@@ -84,53 +186,53 @@
             this.markAsActive_panel.Size = new System.Drawing.Size(6, 40);
             this.markAsActive_panel.TabIndex = 0;
             // 
-            // button4_btn
+            // incomingMoney_btn
             // 
-            this.button4_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4_btn.FlatAppearance.BorderSize = 0;
-            this.button4_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4_btn.Location = new System.Drawing.Point(0, 120);
-            this.button4_btn.Name = "button4_btn";
-            this.button4_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button4_btn.Size = new System.Drawing.Size(200, 40);
-            this.button4_btn.TabIndex = 3;
-            this.button4_btn.Text = "текст";
-            this.button4_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4_btn.UseVisualStyleBackColor = true;
-            this.button4_btn.Click += new System.EventHandler(this.button4_Click);
+            this.incomingMoney_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.incomingMoney_btn.FlatAppearance.BorderSize = 0;
+            this.incomingMoney_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incomingMoney_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incomingMoney_btn.Location = new System.Drawing.Point(0, 120);
+            this.incomingMoney_btn.Name = "incomingMoney_btn";
+            this.incomingMoney_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.incomingMoney_btn.Size = new System.Drawing.Size(200, 40);
+            this.incomingMoney_btn.TabIndex = 3;
+            this.incomingMoney_btn.Text = "Заход ДС";
+            this.incomingMoney_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.incomingMoney_btn.UseVisualStyleBackColor = true;
+            this.incomingMoney_btn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3_btn
+            // salary_btn
             // 
-            this.button3_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3_btn.FlatAppearance.BorderSize = 0;
-            this.button3_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3_btn.Location = new System.Drawing.Point(0, 80);
-            this.button3_btn.Name = "button3_btn";
-            this.button3_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button3_btn.Size = new System.Drawing.Size(200, 40);
-            this.button3_btn.TabIndex = 2;
-            this.button3_btn.Text = "текст";
-            this.button3_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3_btn.UseVisualStyleBackColor = true;
-            this.button3_btn.Click += new System.EventHandler(this.button3_Click);
+            this.salary_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.salary_btn.FlatAppearance.BorderSize = 0;
+            this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salary_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salary_btn.Location = new System.Drawing.Point(0, 80);
+            this.salary_btn.Name = "salary_btn";
+            this.salary_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.salary_btn.Size = new System.Drawing.Size(200, 40);
+            this.salary_btn.TabIndex = 2;
+            this.salary_btn.Text = "Зарплата";
+            this.salary_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.salary_btn.UseVisualStyleBackColor = true;
+            this.salary_btn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // SpendingOrder_btn
+            // expenses_btn
             // 
-            this.SpendingOrder_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SpendingOrder_btn.FlatAppearance.BorderSize = 0;
-            this.SpendingOrder_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SpendingOrder_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SpendingOrder_btn.Location = new System.Drawing.Point(0, 40);
-            this.SpendingOrder_btn.Name = "SpendingOrder_btn";
-            this.SpendingOrder_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.SpendingOrder_btn.Size = new System.Drawing.Size(200, 40);
-            this.SpendingOrder_btn.TabIndex = 1;
-            this.SpendingOrder_btn.Text = "Расход | Закупка";
-            this.SpendingOrder_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SpendingOrder_btn.UseVisualStyleBackColor = true;
-            this.SpendingOrder_btn.Click += new System.EventHandler(this.purchasePrediction_btn_Click);
+            this.expenses_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.expenses_btn.FlatAppearance.BorderSize = 0;
+            this.expenses_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.expenses_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.expenses_btn.Location = new System.Drawing.Point(0, 40);
+            this.expenses_btn.Name = "expenses_btn";
+            this.expenses_btn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.expenses_btn.Size = new System.Drawing.Size(200, 40);
+            this.expenses_btn.TabIndex = 1;
+            this.expenses_btn.Text = "Расход | Закупка";
+            this.expenses_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.expenses_btn.UseVisualStyleBackColor = true;
+            this.expenses_btn.Click += new System.EventHandler(this.purchasePrediction_btn_Click);
             // 
             // dashboard_btn
             // 
@@ -150,107 +252,107 @@
             this.dashboard_btn.UseVisualStyleBackColor = true;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
-            // productAnalysis_tabControl
+            // expenses_tabControl
             // 
-            this.productAnalysis_tabControl.Controls.Add(this.productData_tabPage);
-            this.productAnalysis_tabControl.Controls.Add(this.tabPage2);
-            this.productAnalysis_tabControl.Controls.Add(this.tabPage3);
-            this.productAnalysis_tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productAnalysis_tabControl.Location = new System.Drawing.Point(200, 0);
-            this.productAnalysis_tabControl.Name = "productAnalysis_tabControl";
-            this.productAnalysis_tabControl.SelectedIndex = 0;
-            this.productAnalysis_tabControl.Size = new System.Drawing.Size(700, 524);
-            this.productAnalysis_tabControl.TabIndex = 21;
+            this.expenses_tabControl.Controls.Add(this.data_tabPage);
+            this.expenses_tabControl.Controls.Add(this.data2_tabPage);
+            this.expenses_tabControl.Controls.Add(this.data3_tabPage);
+            this.expenses_tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expenses_tabControl.Location = new System.Drawing.Point(200, 0);
+            this.expenses_tabControl.Name = "expenses_tabControl";
+            this.expenses_tabControl.SelectedIndex = 0;
+            this.expenses_tabControl.Size = new System.Drawing.Size(700, 524);
+            this.expenses_tabControl.TabIndex = 21;
             // 
-            // productData_tabPage
+            // data_tabPage
             // 
-            this.productData_tabPage.BackColor = System.Drawing.Color.Transparent;
-            this.productData_tabPage.Controls.Add(this.productData_dgv);
-            this.productData_tabPage.Location = new System.Drawing.Point(4, 29);
-            this.productData_tabPage.Name = "productData_tabPage";
-            this.productData_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.productData_tabPage.Size = new System.Drawing.Size(692, 491);
-            this.productData_tabPage.TabIndex = 0;
-            this.productData_tabPage.Text = "Данные";
+            this.data_tabPage.BackColor = System.Drawing.Color.Transparent;
+            this.data_tabPage.Controls.Add(this.expensesData_dgv);
+            this.data_tabPage.Location = new System.Drawing.Point(4, 29);
+            this.data_tabPage.Name = "data_tabPage";
+            this.data_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.data_tabPage.Size = new System.Drawing.Size(692, 491);
+            this.data_tabPage.TabIndex = 0;
+            this.data_tabPage.Text = "Data";
             // 
-            // productData_dgv
+            // expensesData_dgv
             // 
-            this.productData_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.productData_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productData_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productData_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productData_dgv.Location = new System.Drawing.Point(3, 3);
-            this.productData_dgv.Name = "productData_dgv";
-            this.productData_dgv.Size = new System.Drawing.Size(686, 485);
-            this.productData_dgv.TabIndex = 0;
-            this.productData_dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.productData_dgv_RowPostPaint);
+            this.expensesData_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.expensesData_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.expensesData_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.expensesData_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expensesData_dgv.Location = new System.Drawing.Point(3, 3);
+            this.expensesData_dgv.Name = "expensesData_dgv";
+            this.expensesData_dgv.Size = new System.Drawing.Size(686, 485);
+            this.expensesData_dgv.TabIndex = 0;
+            this.expensesData_dgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.productData_dgv_RowPostPaint);
             // 
-            // tabPage2
+            // data2_tabPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(592, 397);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.data2_tabPage.Location = new System.Drawing.Point(4, 29);
+            this.data2_tabPage.Name = "data2_tabPage";
+            this.data2_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.data2_tabPage.Size = new System.Drawing.Size(692, 491);
+            this.data2_tabPage.TabIndex = 1;
+            this.data2_tabPage.Text = "Data2";
+            this.data2_tabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // data3_tabPage
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(592, 397);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.data3_tabPage.Location = new System.Drawing.Point(4, 29);
+            this.data3_tabPage.Name = "data3_tabPage";
+            this.data3_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.data3_tabPage.Size = new System.Drawing.Size(692, 491);
+            this.data3_tabPage.TabIndex = 2;
+            this.data3_tabPage.Text = "Data3";
+            this.data3_tabPage.UseVisualStyleBackColor = true;
             // 
-            // reportsSidebarRight_panel
+            // reportsAdditionalSidebar_panel
             // 
-            this.reportsSidebarRight_panel.BackColor = System.Drawing.Color.Gainsboro;
-            this.reportsSidebarRight_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.reportsSidebarRight_panel.Controls.Add(this.UIpanel_btn);
-            this.reportsSidebarRight_panel.Controls.Add(this.SpendingOrderUI_panel);
-            this.reportsSidebarRight_panel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.reportsSidebarRight_panel.Location = new System.Drawing.Point(900, 0);
-            this.reportsSidebarRight_panel.Name = "reportsSidebarRight_panel";
-            this.reportsSidebarRight_panel.Size = new System.Drawing.Size(200, 524);
-            this.reportsSidebarRight_panel.TabIndex = 18;
+            this.reportsAdditionalSidebar_panel.BackColor = System.Drawing.Color.Gainsboro;
+            this.reportsAdditionalSidebar_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.reportsAdditionalSidebar_panel.Controls.Add(this.hidePanel_btn);
+            this.reportsAdditionalSidebar_panel.Controls.Add(this.additional_panel);
+            this.reportsAdditionalSidebar_panel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reportsAdditionalSidebar_panel.Location = new System.Drawing.Point(900, 0);
+            this.reportsAdditionalSidebar_panel.Name = "reportsAdditionalSidebar_panel";
+            this.reportsAdditionalSidebar_panel.Size = new System.Drawing.Size(200, 524);
+            this.reportsAdditionalSidebar_panel.TabIndex = 18;
             // 
-            // UIpanel_btn
+            // hidePanel_btn
             // 
-            this.UIpanel_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UIpanel_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UIpanel_btn.FlatAppearance.BorderSize = 0;
-            this.UIpanel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UIpanel_btn.Image = global::Metiz_Technologies.Properties.Resources.BlackArrowToRight_25;
-            this.UIpanel_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UIpanel_btn.Location = new System.Drawing.Point(0, 0);
-            this.UIpanel_btn.Name = "UIpanel_btn";
-            this.UIpanel_btn.Size = new System.Drawing.Size(200, 40);
-            this.UIpanel_btn.TabIndex = 13;
-            this.UIpanel_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.UIpanel_btn.UseVisualStyleBackColor = true;
-            this.UIpanel_btn.Click += new System.EventHandler(this.UIpanel_btn_Click);
+            this.hidePanel_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.hidePanel_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hidePanel_btn.FlatAppearance.BorderSize = 0;
+            this.hidePanel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hidePanel_btn.Image = global::Metiz_Technologies.Properties.Resources.BlackArrowToRight_25;
+            this.hidePanel_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hidePanel_btn.Location = new System.Drawing.Point(0, 0);
+            this.hidePanel_btn.Name = "hidePanel_btn";
+            this.hidePanel_btn.Size = new System.Drawing.Size(200, 40);
+            this.hidePanel_btn.TabIndex = 13;
+            this.hidePanel_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.hidePanel_btn.UseVisualStyleBackColor = true;
+            this.hidePanel_btn.Click += new System.EventHandler(this.UIpanel_btn_Click);
             // 
-            // SpendingOrderUI_panel
+            // additional_panel
             // 
-            this.SpendingOrderUI_panel.Controls.Add(this.dragANDdrop_lbl);
-            this.SpendingOrderUI_panel.Controls.Add(this.import_panel);
-            this.SpendingOrderUI_panel.Controls.Add(this.filePath_lbl);
-            this.SpendingOrderUI_panel.Controls.Add(this.cboSheet_cb);
-            this.SpendingOrderUI_panel.Controls.Add(this.filePath_txt);
-            this.SpendingOrderUI_panel.Controls.Add(this.product_lbl);
-            this.SpendingOrderUI_panel.Controls.Add(this.date_txt);
-            this.SpendingOrderUI_panel.Controls.Add(this.startDate_txt);
-            this.SpendingOrderUI_panel.Controls.Add(this.endDate_txt);
-            this.SpendingOrderUI_panel.Controls.Add(this.button1_btn);
-            this.SpendingOrderUI_panel.Controls.Add(this.export_pictureBox);
-            this.SpendingOrderUI_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SpendingOrderUI_panel.Location = new System.Drawing.Point(0, 0);
-            this.SpendingOrderUI_panel.Name = "SpendingOrderUI_panel";
-            this.SpendingOrderUI_panel.Size = new System.Drawing.Size(200, 524);
-            this.SpendingOrderUI_panel.TabIndex = 0;
+            this.additional_panel.Controls.Add(this.dragANDdrop_lbl);
+            this.additional_panel.Controls.Add(this.import_panel);
+            this.additional_panel.Controls.Add(this.filePath_lbl);
+            this.additional_panel.Controls.Add(this.cboSheet_cb);
+            this.additional_panel.Controls.Add(this.filePath_txt);
+            this.additional_panel.Controls.Add(this.product_lbl);
+            this.additional_panel.Controls.Add(this.date_txt);
+            this.additional_panel.Controls.Add(this.startDate_txt);
+            this.additional_panel.Controls.Add(this.endDate_txt);
+            this.additional_panel.Controls.Add(this.getResult_btn);
+            this.additional_panel.Controls.Add(this.export_pictureBox);
+            this.additional_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.additional_panel.Location = new System.Drawing.Point(0, 0);
+            this.additional_panel.Name = "additional_panel";
+            this.additional_panel.Size = new System.Drawing.Size(200, 524);
+            this.additional_panel.TabIndex = 0;
             // 
             // dragANDdrop_lbl
             // 
@@ -276,6 +378,16 @@
             this.import_panel.DragEnter += new System.Windows.Forms.DragEventHandler(this.import_panel_DragEnter);
             this.import_panel.DragLeave += new System.EventHandler(this.import_panel_DragLeave);
             // 
+            // filePath_lbl
+            // 
+            this.filePath_lbl.AutoSize = true;
+            this.filePath_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.filePath_lbl.Location = new System.Drawing.Point(8, 202);
+            this.filePath_lbl.Name = "filePath_lbl";
+            this.filePath_lbl.Size = new System.Drawing.Size(64, 19);
+            this.filePath_lbl.TabIndex = 13;
+            this.filePath_lbl.Text = "File Path:";
+            // 
             // cboSheet_cb
             // 
             this.cboSheet_cb.FormattingEnabled = true;
@@ -285,6 +397,58 @@
             this.cboSheet_cb.TabIndex = 22;
             this.cboSheet_cb.SelectedIndexChanged += new System.EventHandler(this.cboSheet_cb_SelectedIndexChanged);
             this.cboSheet_cb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboSheet_cb_KeyPress);
+            // 
+            // filePath_txt
+            // 
+            this.filePath_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.filePath_txt.Location = new System.Drawing.Point(12, 232);
+            this.filePath_txt.Multiline = true;
+            this.filePath_txt.Name = "filePath_txt";
+            this.filePath_txt.Size = new System.Drawing.Size(178, 40);
+            this.filePath_txt.TabIndex = 14;
+            // 
+            // product_lbl
+            // 
+            this.product_lbl.AutoSize = true;
+            this.product_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.product_lbl.Location = new System.Drawing.Point(8, 281);
+            this.product_lbl.Name = "product_lbl";
+            this.product_lbl.Size = new System.Drawing.Size(133, 19);
+            this.product_lbl.TabIndex = 18;
+            this.product_lbl.Text = "Вид номенклатуры:";
+            // 
+            // date_txt
+            // 
+            this.date_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.date_txt.Location = new System.Drawing.Point(140, 278);
+            this.date_txt.Name = "date_txt";
+            this.date_txt.Size = new System.Drawing.Size(50, 25);
+            this.date_txt.TabIndex = 15;
+            // 
+            // startDate_txt
+            // 
+            this.startDate_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.startDate_txt.Location = new System.Drawing.Point(12, 309);
+            this.startDate_txt.Name = "startDate_txt";
+            this.startDate_txt.Size = new System.Drawing.Size(178, 25);
+            this.startDate_txt.TabIndex = 16;
+            // 
+            // endDate_txt
+            // 
+            this.endDate_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.endDate_txt.Location = new System.Drawing.Point(12, 340);
+            this.endDate_txt.Name = "endDate_txt";
+            this.endDate_txt.Size = new System.Drawing.Size(178, 25);
+            this.endDate_txt.TabIndex = 17;
+            // 
+            // getResult_btn
+            // 
+            this.getResult_btn.Location = new System.Drawing.Point(12, 379);
+            this.getResult_btn.Name = "getResult_btn";
+            this.getResult_btn.Size = new System.Drawing.Size(122, 39);
+            this.getResult_btn.TabIndex = 19;
+            this.getResult_btn.Text = "button1";
+            this.getResult_btn.UseVisualStyleBackColor = true;
             // 
             // export_pictureBox
             // 
@@ -297,86 +461,24 @@
             this.export_pictureBox.TabIndex = 20;
             this.export_pictureBox.TabStop = false;
             // 
-            // button1_btn
-            // 
-            this.button1_btn.Location = new System.Drawing.Point(12, 379);
-            this.button1_btn.Name = "button1_btn";
-            this.button1_btn.Size = new System.Drawing.Size(122, 39);
-            this.button1_btn.TabIndex = 19;
-            this.button1_btn.Text = "button1";
-            this.button1_btn.UseVisualStyleBackColor = true;
-            // 
-            // product_lbl
-            // 
-            this.product_lbl.AutoSize = true;
-            this.product_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.product_lbl.Location = new System.Drawing.Point(8, 281);
-            this.product_lbl.Name = "product_lbl";
-            this.product_lbl.Size = new System.Drawing.Size(133, 19);
-            this.product_lbl.TabIndex = 18;
-            this.product_lbl.Text = "Вид номенклатуры:";
-            // 
-            // endDate_txt
-            // 
-            this.endDate_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.endDate_txt.Location = new System.Drawing.Point(12, 340);
-            this.endDate_txt.Name = "endDate_txt";
-            this.endDate_txt.Size = new System.Drawing.Size(178, 25);
-            this.endDate_txt.TabIndex = 17;
-            // 
-            // startDate_txt
-            // 
-            this.startDate_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.startDate_txt.Location = new System.Drawing.Point(12, 309);
-            this.startDate_txt.Name = "startDate_txt";
-            this.startDate_txt.Size = new System.Drawing.Size(178, 25);
-            this.startDate_txt.TabIndex = 16;
-            // 
-            // date_txt
-            // 
-            this.date_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.date_txt.Location = new System.Drawing.Point(140, 278);
-            this.date_txt.Name = "date_txt";
-            this.date_txt.Size = new System.Drawing.Size(50, 25);
-            this.date_txt.TabIndex = 15;
-            // 
-            // filePath_txt
-            // 
-            this.filePath_txt.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.filePath_txt.Location = new System.Drawing.Point(12, 232);
-            this.filePath_txt.Multiline = true;
-            this.filePath_txt.Name = "filePath_txt";
-            this.filePath_txt.Size = new System.Drawing.Size(178, 40);
-            this.filePath_txt.TabIndex = 14;
-            // 
-            // filePath_lbl
-            // 
-            this.filePath_lbl.AutoSize = true;
-            this.filePath_lbl.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.filePath_lbl.Location = new System.Drawing.Point(8, 202);
-            this.filePath_lbl.Name = "filePath_lbl";
-            this.filePath_lbl.Size = new System.Drawing.Size(64, 19);
-            this.filePath_lbl.TabIndex = 13;
-            this.filePath_lbl.Text = "File Path:";
-            // 
             // Reports_userControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.productAnalysis_tabControl);
-            this.Controls.Add(this.reportsSidebarRight_panel);
-            this.Controls.Add(this.reportsSidebarLeft_panel);
+            this.Controls.Add(this.expenses_tabControl);
+            this.Controls.Add(this.reportsAdditionalSidebar_panel);
+            this.Controls.Add(this.reportsMenuSidebar_panel);
             this.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Reports_userControl";
             this.Size = new System.Drawing.Size(1100, 524);
-            this.reportsSidebarLeft_panel.ResumeLayout(false);
-            this.productAnalysis_tabControl.ResumeLayout(false);
-            this.productData_tabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.productData_dgv)).EndInit();
-            this.reportsSidebarRight_panel.ResumeLayout(false);
-            this.SpendingOrderUI_panel.ResumeLayout(false);
-            this.SpendingOrderUI_panel.PerformLayout();
+            this.reportsMenuSidebar_panel.ResumeLayout(false);
+            this.expenses_tabControl.ResumeLayout(false);
+            this.data_tabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expensesData_dgv)).EndInit();
+            this.reportsAdditionalSidebar_panel.ResumeLayout(false);
+            this.additional_panel.ResumeLayout(false);
+            this.additional_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.export_pictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -384,30 +486,36 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel reportsSidebarLeft_panel;
+        private System.Windows.Forms.Panel reportsMenuSidebar_panel;
         private System.Windows.Forms.Panel markAsActive_panel;
-        private System.Windows.Forms.Button button4_btn;
-        private System.Windows.Forms.Button button3_btn;
-        private System.Windows.Forms.Button SpendingOrder_btn;
+        private System.Windows.Forms.Button incomingMoney_btn;
+        private System.Windows.Forms.Button salary_btn;
+        private System.Windows.Forms.Button expenses_btn;
         private System.Windows.Forms.Button dashboard_btn;
-        private System.Windows.Forms.TabControl productAnalysis_tabControl;
-        private System.Windows.Forms.TabPage productData_tabPage;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        public System.Windows.Forms.DataGridView productData_dgv;
-        private System.Windows.Forms.Panel reportsSidebarRight_panel;
-        private System.Windows.Forms.Button UIpanel_btn;
-        private System.Windows.Forms.Panel SpendingOrderUI_panel;
+        private System.Windows.Forms.TabControl expenses_tabControl;
+        private System.Windows.Forms.TabPage data_tabPage;
+        private System.Windows.Forms.TabPage data2_tabPage;
+        private System.Windows.Forms.TabPage data3_tabPage;
+        public System.Windows.Forms.DataGridView expensesData_dgv;
+        private System.Windows.Forms.Panel reportsAdditionalSidebar_panel;
+        private System.Windows.Forms.Button hidePanel_btn;
+        private System.Windows.Forms.Panel additional_panel;
         private System.Windows.Forms.ComboBox cboSheet_cb;
         private System.Windows.Forms.Label dragANDdrop_lbl;
         private System.Windows.Forms.Panel import_panel;
         private System.Windows.Forms.PictureBox export_pictureBox;
-        private System.Windows.Forms.Button button1_btn;
+        private System.Windows.Forms.Button getResult_btn;
         private System.Windows.Forms.Label product_lbl;
         private System.Windows.Forms.TextBox endDate_txt;
         private System.Windows.Forms.TextBox startDate_txt;
         private System.Windows.Forms.TextBox date_txt;
         private System.Windows.Forms.TextBox filePath_txt;
         private System.Windows.Forms.Label filePath_lbl;
+        private System.Windows.Forms.Button route_btn;
+        private System.Windows.Forms.Button awardsWorkers_btn;
+        private System.Windows.Forms.Button factory_btn;
+        private System.Windows.Forms.Button reportOther_btn;
+        private System.Windows.Forms.Button traffic_btn;
+        private System.Windows.Forms.Button money_btn;
     }
 }

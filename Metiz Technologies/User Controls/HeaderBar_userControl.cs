@@ -1,4 +1,5 @@
 ﻿using Metiz_Technologies.Classes;
+using Metiz_Technologies.Properties;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -36,11 +37,31 @@ namespace Metiz_Technologies.User_Controls
             {
                 if (isDragging && this.Parent is Form parentForm) // Проверяем, является ли родитель Form
                 {
-                    Point currentScreenPosition = parentForm.PointToScreen(a.Location);
-                    parentForm.Location = new Point(
-                        currentScreenPosition.X - startPoint.X,
-                        currentScreenPosition.Y - startPoint.Y
-                    );
+                    if (parentForm.WindowState == FormWindowState.Normal)
+                    {
+                        Point currentScreenPosition = parentForm.PointToScreen(a.Location);
+                        parentForm.Location = new Point(
+                            currentScreenPosition.X - startPoint.X,
+                            currentScreenPosition.Y - startPoint.Y
+                        );
+                    }
+                }
+            };
+
+            headerBar_panel.MouseDoubleClick += (s, a) =>
+            {
+                if (this.Parent is Form parentForm)
+                {
+                    if (parentForm.WindowState == FormWindowState.Maximized)
+                    {
+                        parentForm.WindowState = FormWindowState.Normal;
+                        windowMinMax_btn.BackgroundImage = Resources.WhiteThemeFullScreen_20;
+                    }
+                    else if (parentForm.WindowState == FormWindowState.Normal)
+                    {
+                        parentForm.WindowState = FormWindowState.Maximized;
+                        windowMinMax_btn.BackgroundImage = Resources.WhiteThemeRestoreDown_20;
+                    }
                 }
             };
 
@@ -58,9 +79,15 @@ namespace Metiz_Technologies.User_Controls
                 if (this.Parent is Form parentForm)
                 {
                     if (parentForm.WindowState == FormWindowState.Maximized)
+                    {
                         parentForm.WindowState = FormWindowState.Normal;
+                        windowMinMax_btn.BackgroundImage = Resources.WhiteThemeFullScreen_20;
+                    }
                     else if (parentForm.WindowState == FormWindowState.Normal)
+                    {
                         parentForm.WindowState = FormWindowState.Maximized;
+                        windowMinMax_btn.BackgroundImage = Resources.WhiteThemeRestoreDown_20;
+                    }
                 }
             };
             close_btn.Click += (s, a) => { Application.Exit(); };
